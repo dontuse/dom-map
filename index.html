@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+<body>
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to
+    improve your experience.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+
+
+<div style="margin: 0 auto; width: 80%; background: #cccccc">
+    <h1>Карта для дома</h1>
+
+    <div class="b-ya-video-map">
+        <div id="map" style="height: 400px"></div>
+        <div class="b-ya-video-map__points-box">
+            <a class="b-ya-video-map__p-l" href="">точка 1</a> <a class="b-ya-video-map__p-l" href="">точка 3</a>
+            <a class="b-ya-video-map__p-l" href="">точка 4</a> <a class="b-ya-video-map__p-l" href="">точка 5</a> <a
+                href="">точка 5</a>
+        </div>
+    </div>
+
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+
+<!-- данные для карты-->
+<script>
+    var yaVideoPointData = [
+        {
+            "id": 1,
+            address: "Ул Московская 225",
+            "type": "office",
+            "name": "Банк «Екатеринбург» ОАО, Юго-Западное ОПЕРУ",
+            "phones": "311–05–66, 311–05–67",
+            "address": "Амундсена, 60",
+            "lat": "60.600448",
+            "lon": "56.83615",
+            "url": "http://cctv.ekat.ertelecom.ru:8080/mobile?login=ertel_07&password=43a53593349ea0ec9e66e046558fcd12&channelid=3f8fe25f-9708-4040-a74f-f2e4abd43214&camera_fps=0"
+        },
+        {
+            "id": 11,
+            address: "Ул Московская 225",
+            "type": "office",
+            "name": "Банк «Екатеринбург» ОАО, Юго-Западное ОПЕРУ",
+            "phones": "311–05–66, 311–05–67",
+            "address": "Амундсена, 60",
+            "lat": "60.600448",
+            "lon": "56.83615",
+            "url": "http://cctv.ekat.ertelecom.ru:8080/mobile?login=ertel_07&password=43a53593349ea0ec9e66e046558fcd12&channelid=3f8fe25f-9708-4040-a74f-f2e4abd43214&camera_fps=0"
+        },
+        {
+            "id": 133,
+            address: "Ул Московская 225",
+            "type": "office",
+            "name": "Банк «Екатеринбург» ОАО, Юго-Западное ОПЕРУ",
+            "phones": "311–05–66, 311–05–67",
+            "address": "Амундсена, 60",
+            "lat": "60.58290518252431",
+            "lon": "56.836598198318306",
+            "url": "http://cctv.ekat.ertelecom.ru:8080/mobile?login=ertel_07&password=43a53593349ea0ec9e66e046558fcd12&channelid=3f8fe25f-9708-4040-a74f-f2e4abd43214&camera_fps=0"
+        }
+    ];
+</script>
+
+<script>
+    $(function () {
+        ymaps.ready(init);
+        var myMap;
+        var data = yaVideoPointData;
+
+        function init() {
+            myMap = new ymaps.Map("map", {
+                center: [55.76, 37.64],
+                zoom: 7
+            });
+
+            renderAtmPoints(data);
+        }
+
+        function renderAtmPoints(json) {
+
+
+            for (var i = 0; i < json.length; i++) {
+                // тип
+
+                var BallLayout = ymaps.templateLayoutFactory.createClass(BallonTpl);
+
+                var placemark = new ymaps.Placemark([json[i].lon, json[i].lat], {
+                    pointName: json[i].name,
+                    pointAddress: json[i].address,
+                    pointId: json[i].id,
+                    pointWd: wd,
+                    pointWdu: wdu,
+                    pointPhones: json[i].phones
+                }, {
+
+                    iconImageHref: iconImage, // картинка иконки
+                    iconImageSize: [43, 52], // размеры картинки
+                    balloonZIndex: 1111,
+                    balloonContentLayout: BallLayout,
+                    pointSelected: false
+                    //balloonAutoPan: false
+                    // iconImageOffset: [-3, -42] // смещение картинки
+                });
+
+
+                // добавляем метки в коллекцию
+                myCollection.add(placemark);
+            }
+
+            map.geoObjects.add(myCollection);
+            // Set center and zoom using collection bounds.
+            map.setBounds(myCollection.getBounds(), {checkZoomRange: true});
+
+        }
+
+    });
+</script>
+
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+    var _gaq = [
+        ['_setAccount', 'UA-XXXXX-X'],
+        ['_trackPageview']
+    ];
+    (function (d, t) {
+        var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        g.src = '//www.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g, s)
+    }(document, 'script'));
+</script>
+</body>
+</html>
