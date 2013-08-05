@@ -94,15 +94,18 @@ textarea {
    ========================================================================== */
 
 
-
-
-
-
-
-
-
-
-
+.wrapper {
+    margin: auto;
+    min-width: 930px;
+    max-width: 1200px;
+    padding: 0 20px 428px 50px;
+    background: #FFF no-repeat top right url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAErAgMAAABV9c7KAAAAGXRF…9IyKEkBKRJP33rIgQQsplfhEhhBTKiTYhhHSLVyaE9MkFtWIJBITpYFMAAAAASUVORK5CYII=");
+    -webkit-box-shadow: 0 8px 6px 6px #BBBCBD;
+    -moz-box-shadow: 0 8px 6px 6px #bbbcbd;
+    -o-box-shadow: 0 8px 6px 6px #bbbcbd;
+    box-shadow: 0 8px 6px 6px #BBBCBD;
+    padding-top: 15px;
+}
 
 
 
