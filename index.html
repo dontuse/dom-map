@@ -34,8 +34,8 @@
     <h1>Карта для дома</h1>
 
     <div class="b-ya-video-map">
-        <div id="map" style="height: 400px"></div>
-        <div class="b-ya-video-map__points-box">
+        <div id="map" style="height: 500px"></div>
+        <div id="js-ya-video-map__points-box" class="b-ya-video-map__points-box">
             <a class="b-ya-video-map__p-l" href="">точка 1</a> <a class="b-ya-video-map__p-l" href="">точка 3</a>
             <a class="b-ya-video-map__p-l" href="">точка 4</a> <a class="b-ya-video-map__p-l" href="">точка 5</a> <a
                 href="">точка 5</a>
@@ -50,6 +50,15 @@
 <script src="js/main.js"></script>
 <script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
 
+
+<!-- -->
+<script id="ya-map-tpl" type="tpl">
+    <div style="padding: 15px;">
+        <img src="$[properties.url]">
+    </div>
+</script>
+<!-- -->
+
 <!-- данные для карты-->
 <script>
     var yaVideoPointData = [
@@ -59,7 +68,6 @@
             "type": "office",
             "name": "Банк «Екатеринбург» ОАО, Юго-Западное ОПЕРУ",
             "phones": "311–05–66, 311–05–67",
-            "address": "Амундсена, 60",
             "lat": "60.600448",
             "lon": "56.83615",
             "url": "http://cctv.ekat.ertelecom.ru:8080/mobile?login=ertel_07&password=43a53593349ea0ec9e66e046558fcd12&channelid=3f8fe25f-9708-4040-a74f-f2e4abd43214&camera_fps=0"
@@ -70,10 +78,9 @@
             "type": "office",
             "name": "Банк «Екатеринбург» ОАО, Юго-Западное ОПЕРУ",
             "phones": "311–05–66, 311–05–67",
-            "address": "Амундсена, 60",
-            "lat": "60.600448",
-            "lon": "56.83615",
-            "url": "http://cctv.ekat.ertelecom.ru:8080/mobile?login=ertel_07&password=43a53593349ea0ec9e66e046558fcd12&channelid=3f8fe25f-9708-4040-a74f-f2e4abd43214&camera_fps=0"
+            "lat": "60.627178",
+            "lon": "56.828436",
+            "url": "http://cctv.ekat.ertelecom.ru:8080/mobile?login=ertel_q7&password=1a52b9fb1587502bae8709d5345a29ae&channelid=6020ac3e-c228-492f-8a5d-d73ab3cf42ba&camera_fps=0"
         },
         {
             "id": 133,
@@ -81,10 +88,9 @@
             "type": "office",
             "name": "Банк «Екатеринбург» ОАО, Юго-Западное ОПЕРУ",
             "phones": "311–05–66, 311–05–67",
-            "address": "Амундсена, 60",
             "lat": "60.58290518252431",
             "lon": "56.836598198318306",
-            "url": "http://cctv.ekat.ertelecom.ru:8080/mobile?login=ertel_07&password=43a53593349ea0ec9e66e046558fcd12&channelid=3f8fe25f-9708-4040-a74f-f2e4abd43214&camera_fps=0"
+            "url": "http://cctv.ekat.ertelecom.ru:8080/mobile?login=ertel_07&password=43a53593349ea0ec9e66e046558fcd12&channelid=c49daca8-2f38-4dc7-ae18-232f8e166a71&camera_fps=0"
         }
     ];
 </script>
@@ -92,54 +98,79 @@
 <script>
     $(function () {
         ymaps.ready(init);
-        var myMap;
+        var map;
         var data = yaVideoPointData;
 
+
         function init() {
-            myMap = new ymaps.Map("map", {
-                center: [55.76, 37.64],
-                zoom: 7
+
+            var BallonTpl = $('#ya-map-tpl').html();
+
+            var map = new ymaps.Map("map", {
+                center: [56.326944, 44.0075],
+                zoom: 10,
+                type: 'yandex#map'
             });
 
-            renderAtmPoints(data);
-        }
+            map.controls
+                    .add('zoomControl');
 
-        function renderAtmPoints(json) {
+            var myCollection = new ymaps.GeoObjectCollection();
 
+            console.log(myCollection);
 
-            for (var i = 0; i < json.length; i++) {
-                // тип
-
-                var BallLayout = ymaps.templateLayoutFactory.createClass(BallonTpl);
-
-                var placemark = new ymaps.Placemark([json[i].lon, json[i].lat], {
-                    pointName: json[i].name,
-                    pointAddress: json[i].address,
-                    pointId: json[i].id,
-                    pointWd: wd,
-                    pointWdu: wdu,
-                    pointPhones: json[i].phones
-                }, {
-
-                    iconImageHref: iconImage, // картинка иконки
-                    iconImageSize: [43, 52], // размеры картинки
-                    balloonZIndex: 1111,
-                    balloonContentLayout: BallLayout,
-                    pointSelected: false
-                    //balloonAutoPan: false
-                    // iconImageOffset: [-3, -42] // смещение картинки
-                });
+            renderPoints(data);
 
 
-                // добавляем метки в коллекцию
-                myCollection.add(placemark);
+
+            function renderPoints(json) {
+
+                var html = '';
+
+                if (json.length === 0) {
+                    return;
+                }
+
+
+
+                myCollection.removeAll();
+
+                for (var i = 0; i < json.length; i++) {
+
+                    html += '<a href="">'+json[i].address+'</a>';
+
+                    var BallLayout = ymaps.templateLayoutFactory.createClass(BallonTpl);
+
+                    var placemark = new ymaps.Placemark([json[i].lon, json[i].lat], {
+                        name: json[i].name,
+                        address: json[i].address,
+                        id: json[i].id,
+                        url: json[i].url
+
+                    }, {
+                        balloonZIndex: 1111,
+                        balloonContentLayout: BallLayout,
+                        pointSelected: false
+                    });
+
+
+
+                    // добавляем метки в коллекцию
+                    myCollection.add(placemark);
+
+                }
+
+                $('#js-ya-video-map__points-box').html(html);
+
+                map.geoObjects.add(myCollection);
+                // Set center and zoom using collection bounds.
+                map.setBounds(myCollection.getBounds(), {checkZoomRange: true});
+
             }
 
-            map.geoObjects.add(myCollection);
-            // Set center and zoom using collection bounds.
-            map.setBounds(myCollection.getBounds(), {checkZoomRange: true});
 
         }
+
 
     });
 </script>
