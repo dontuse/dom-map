@@ -10,6 +10,24 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
+@font-face {
+    font-family: 'Chevin';
+    font-weight: normal;
+    font-style: normal;
+    src: url("../fonts/chevin_regular.eot");
+    src: url("../fonts/chevin_regular.eot?#iefix") format('embedded-opentype'),
+    url("../fonts/chevin_regular.woff") format('woff'), url("../fonts/chevin_regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Chevin';
+    font-weight: bold;
+    font-style: normal;
+    src: url("../fonts/chevin_bold.eot");
+    src: url("../fonts/chevin_bold.eot?#iefix") format('embedded-opentype'), url("../fonts/chevin_bold.woff") format('woff'), url("../fonts/chevin_bold.ttf") format('truetype');
+}
+
+
 html,
 button,
 input,
@@ -21,6 +39,10 @@ textarea {
 body {
     font-size: 1em;
     line-height: 1.4;
+}
+
+body,html {
+    height: 100%;
 }
 
 /*
@@ -98,17 +120,68 @@ textarea {
     margin: auto;
     min-width: 930px;
     max-width: 1200px;
-    padding: 0 20px 428px 50px;
+    padding: 20px;
     background: #FFF no-repeat top right url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAErAgMAAABV9c7KAAAAGXRF…9IyKEkBKRJP33rIgQQsplfhEhhBTKiTYhhHSLVyaE9MkFtWIJBITpYFMAAAAASUVORK5CYII=");
     -webkit-box-shadow: 0 8px 6px 6px #BBBCBD;
     -moz-box-shadow: 0 8px 6px 6px #bbbcbd;
     -o-box-shadow: 0 8px 6px 6px #bbbcbd;
     box-shadow: 0 8px 6px 6px #BBBCBD;
     padding-top: 15px;
+    min-height: 100%;
 }
 
 
+.b-ya-video-map__points-box {
+    padding-top: 10px;
+}
 
+.b-ya-video-map__points-h {
+    font-weight: bold;
+    float: left;
+}
+
+.b-ya-video-map__p-l:link,
+.b-ya-video-map__p-l:visited {
+    color: #619ddc;
+    border-bottom: 1px dashed #619ddc;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1;
+    margin-left: 5px;
+}
+
+.b-ya-video-map__p-l_active:link,
+.b-ya-video-map__p-l_active:visited {
+    color: #000000;
+    border-bottom: none;
+}
+
+.b-ya-video-map__links-box {
+    overflow: hidden;
+}
+
+/*---| .b-main-head |----------------------start----------------------------------------*/
+
+.b-main-head {
+    padding: 0;
+    margin: 0;
+    font-family: Chevin;
+    font-size: 48px;
+    line-height: 100px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/*===| .b-main-head |======================end==========================================*/
+
+/*---| .b-logo |----------------------start----------------------------------------*/
+
+.b-logo {
+    float: left;
+    margin-right: 20px
+}
+
+/*===| b-logo |======================end==========================================*/
 
 
 
