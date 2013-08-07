@@ -37,12 +37,15 @@ textarea {
 }
 
 body {
-    font-size: 1em;
+    font-size: 13px;
+    font-family: Verdana;
     line-height: 1.4;
+    padding: 0 20px;
 }
 
 body,html {
     height: 100%;
+    background: #ffde00;
 }
 
 /*
@@ -116,20 +119,49 @@ textarea {
    ========================================================================== */
 
 
-.wrapper {
+.b-page {
     margin: auto;
     min-width: 930px;
     max-width: 1200px;
     padding: 20px;
-    background: #FFF no-repeat top right url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAErAgMAAABV9c7KAAAAGXRF…9IyKEkBKRJP33rIgQQsplfhEhhBTKiTYhhHSLVyaE9MkFtWIJBITpYFMAAAAASUVORK5CYII=");
-    -webkit-box-shadow: 0 8px 6px 6px #BBBCBD;
-    -moz-box-shadow: 0 8px 6px 6px #bbbcbd;
-    -o-box-shadow: 0 8px 6px 6px #bbbcbd;
-    box-shadow: 0 8px 6px 6px #BBBCBD;
+    background: #ffffff;
+    box-shadow: 0 8px 6px 6px #bea500;
     padding-top: 15px;
+    padding-bottom: 0;
     min-height: 100%;
 }
 
+.b-page__content {
+    padding-bottom: 120px;
+}
+
+.b-wrapper {
+    margin: 0 auto;
+    min-width: 930px;
+    max-width: 1200px;
+}
+
+.b-footer {
+    padding:  0 20px;
+}
+
+.b-footer__menu {
+    float: right;
+    font-size: 13px;
+}
+
+.b-footer__menu a:link,
+.b-footer__menu a:visited {
+    color: #030303;
+}
+
+.b-footer__menu a:hover {
+    text-decoration: none;
+}
+
+.b-footer__copyr {
+    overflow: hidden;
+}
 
 .b-ya-video-map__points-box {
     padding-top: 10px;
@@ -138,6 +170,7 @@ textarea {
 .b-ya-video-map__points-h {
     font-weight: bold;
     float: left;
+    margin-right: 10px;
 }
 
 .b-ya-video-map__p-l:link,
@@ -147,7 +180,6 @@ textarea {
     text-decoration: none;
     display: inline-block;
     line-height: 1;
-    margin-left: 5px;
 }
 
 .b-ya-video-map__p-l_active:link,
