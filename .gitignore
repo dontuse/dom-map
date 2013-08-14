@@ -1,2 +1,84 @@
 # Include your project-specific ignores in this file
 # Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
+
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~
+*.sass-cache
+
+# OS or Editor folders
+.DS_Store
+._*
+Thumbs.db
+.cache
+.project
+.settings
+.tmproj
+nbproject
+*.sublime-project
+*.sublime-workspace
+
+# Dreamweaver added files
+_notes
+dwsync.xml
+
+# Komodo
+*.komodoproject
+.komodotools
+
+# Espresso
+*.esproj
+*.espressostorage
+
+# Rubinius
+*.rbc
+
+# Folders to ignore
+.git
+.hg
+.svn
+.CVS
+intermediate
+.idea
+
+# Node.JS
+pids
+logs
+results
+
+node_modules
+npm-debug.log
+
+# Vagrant files
+.vagrant
+Vagrantfile
+
+*.log
+*.bin
+*.settings
+*.ai
+.project
+*db.php
+uploads/
+*.komodoproject
+/nbproject/private/
+/.komodotools/
+*.xml
+*.properties
+nbproject/
+/.idea/
+.ai
+protected/config/db.php
+/protected/config/db.php
+/files
+/protected/config/params.php
+/.htaccess
+/protected/config/db2.php
+/robots.txt
