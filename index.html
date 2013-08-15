@@ -69,9 +69,9 @@
     </div>
 </footer>
 
-<div  id="popup" style="position: fixed; background: rgba(0,0,0,0.4); width: 100%; height: 100%; left: 0; top: 0; display: none;">
-    <div style="background: #ffffff; width: 800px; margin: 0 auto;  padding: 20px; position: relative;">
-        <span id="close" style="position: absolute; right: 25px; top: 5px; font-size: 25px; cursor: pointer;">x</span>
+<div  id="popup" style="">
+    <div id="popupInner">
+        <span id="close">x</span>
         <div>
             <script type='text/javascript'> function RunMultiple() {
                 var url = 'http://cctv.ekat.ertelecom.ru:8080/site?login=public&password&channelid=3f8fe25f-9708-4040-a74f-f2e4abd43214&resolutionX=600&resolutionY=800' + '&rand=' + Math.floor(Math.random() * 1000000);
@@ -98,13 +98,12 @@
 <script id="ya-map-tpl" type="tpl">
     <div style="padding: 15px;">
         <div style="margin-bottom: 10px;">
-            <img width="320" height="240" src="$[properties.url]">
+            <img id="pop-video" width="320" height="240" src="$[properties.url]">
         </div>
         <div style="text-align: center;">
             <a class="b-button" href="$[properties.url]">Во весь экран</a>
         </div>
     </div>
-
 </script>
 <!-- -->
 
@@ -113,52 +112,52 @@
     var yaVideoPointData = [
         {
             "id": 1,
-            address: "Ул Московская 225",
-            "name": "Банк «Екатеринбург» ОАО, Юго-Западное ОПЕРУ",
+             address: "Кировградская 1",
+            "name": "Камера 1 «Летний паркУРАЛМАШ» Кировградская 1",
             "lat": "60.600448",
             "lon": "56.83615",
-            "url": "login=ertel_07&password=43a53593349ea0ec9e66e046558fcd12&channelid=3f8fe25f-9708-4040-a74f-f2e4abd43214&camera_fps=0"
+            "url": "login=public&password&channelid=3f8fe25f-9708-4040-a74f-f2e4abd43214"
         },
         {
             "id": 11,
-            address: "Парк Культуры",
-            "name": "Банк «Екатеринбург» ОАО, Юго-Западное ОПЕРУ",
+            address: "Кировградская 1",
+            "name": "Камера 2 «Летний паркУРАЛМАШ» Кировградская 1 ",
             "lat": "60.627178",
             "lon": "56.828436",
-            "url": "login=ertel_q7&password=1a52b9fb1587502bae8709d5345a29ae&channelid=6020ac3e-c228-492f-8a5d-d73ab3cf42ba&camera_fps=0"
+            "url": "login=public&password&channelid=9b08008f-3b02-487c-ab25-577584c88ba7"
         },
         {
             "id": 133,
-            address: "Ул Тверская 25/3",
-            "name": "Банк «Екатеринбург» ОАО, Юго-Западное ОПЕРУ",
+            address: "Кировградская 1",
+            "name": "Камера 3 «Летний паркУРАЛМАШ» Кировградская 1",
             "lat": "60.58290518252431",
             "lon": "56.836598198318306",
-            "url": "login=ertel_07&password=43a53593349ea0ec9e66e046558fcd12&channelid=c49daca8-2f38-4dc7-ae18-232f8e166a71&camera_fps=0"
+            "url": "login=public&password&channelid=c49daca8-2f38-4dc7-ae18-232f8e166a71"
         },
         {
             "id": 134,
-            address: "Уличная Улица 225",
-            "name": "Банк «Екатеринбург» ОАО, Юго-Западное ОПЕРУ",
+            address: "Вайнера, 9/а/1",
+            "name": "Камера 1 Вайнера, 9/а/1",
             "phones": "311–05–66, 311–05–67",
             "lat": "60.58290518252431",
             "lon": "56.836598198318306",
-            "url": "login=ertel_07&password=43a53593349ea0ec9e66e046558fcd12&channelid=c49daca8-2f38-4dc7-ae18-232f8e166a71&camera_fps=0"
+            "url": "login=public&password&channelid=3727ead4-c3c4-4a51-bc71-85185a56d44b"
         },
         {
             "id": 1344,
-            address: "Уличная Улица с Длинным длинным названием 22531",
-            "name": "Банк «Екатеринбург» ОАО, Юго-Западное ОПЕРУ",
+            address: "Ленина Пр-Кт, 28",
+            "name": "Камера1 Ленина Пр-Кт, 28",
             "lat": "60.64",
             "lon": "56.84",
-            "url": "login=ertel_07&password=43a53593349ea0ec9e66e046558fcd12&channelid=c49daca8-2f38-4dc7-ae18-232f8e166a71&camera_fps=0"
-        },
+            "url": "login=public&password&channelid=3a2adfd4-08c9-4af4-a62e-ce9bcfddca72"
+        } ,
         {
-            "id": 3344,
-            address: "Проспект бразилии",
-            "name": "Банк «Екатеринбург» ОАО, Юго-Западное ОПЕРУ",
+            "id": 1345,
+            address: "Ленина Пр-Кт, 28",
+            "name": " Камера2 Ленина Пр-Кт, 28",
             "lat": "60.64",
             "lon": "56.84",
-            "url": "login=ertel_07&password=43a53593349ea0ec9e66e046558fcd12&channelid=c49daca8-2f38-4dc7-ae18-232f8e166a71&camera_fps=0"
+            "url": "login=public&password&channelid=6020ac3e-c228-492f-8a5d-d73ab3cf42ba"
         }
     ];
 </script>
@@ -210,7 +209,7 @@
 
                 for (i = 0; i < json.length; i++) {
 
-                    html += '<a data-id="' + json[i].id + '" class="js-ya-video-map__points-box__a b-ya-video-map__p-l" href="">' + json[i].address + '</a>';
+                    html += '<a data-id="' + json[i].id + '" class="js-ya-video-map__points-box__a b-ya-video-map__p-l" href="">' + json[i].name + '</a>';
 
                     if (!(json.length - 1 === i)) {
                         html += ', '
@@ -222,7 +221,7 @@
                         name: json[i].name,
                         address: json[i].address,
                         id: json[i].id,
-                        url: url + json[i].url
+                        url: url + json[i].url +'&rand=' + Math.floor(Math.random() * 1000000)
 
                     }, {
                         balloonZIndex: 1111,
@@ -294,18 +293,21 @@
                 return false;
             }
 
+            $('#close').on('click', function(e){
+                $('#popup').hide();
+            });
 
+            $('body').on('click', '.b-button',function(e){
+                e.preventDefault();
+                var url = $('#pop-video').attr('src');
+                map.balloon.close();
+                $('#videostream')[0].src = url +'resolutionX=600&resolutionY=800';
+                $('#popup').show();
+
+            });
         }
 
-        $('#close').on('click', function(e){
-            $('#popup').hide();
-        });
 
-        $('body').on('click', '.b-button',function(e){
-            e.preventDefault();
-            $('#videostream')[0].src = 'http://cctv.ekat.ertelecom.ru:8080/site?login=public&password&channelid=3f8fe25f-9708-4040-a74f-f2e4abd43214&resolutionX=600&resolutionY=800' + '&rand=' + Math.floor(Math.random() * 1000000);
-            $('#popup').show();
-        });
 
     });
 </script>

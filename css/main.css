@@ -228,7 +228,36 @@ textarea {
 
 /*===| .b-button |======================end==========================================*/
 
+#popup {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: none;
+}
 
+#popupInner {
+    background: #ffffff;
+    width: 640px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    position: relative;
+    margin-top: 40px;
+}
+
+#close {
+    position: absolute;
+    right: 15px;
+    top: 0px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#close:hover {
+
+}
 
 /* ==========================================================================
    Helper classes

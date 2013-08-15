@@ -198,59 +198,119 @@
 <!-- -->
 
 <!-- данные для карты-->
-<script>
-    var yaVideoPointData = [
-        {
-            "id": 1,
-            address: "Ул Московская 225",
-            "name": "Банк «Екатеринбург» ОАО, Юго-Западное ОПЕРУ",
-            "lat": "60.600448",
-            "lon": "56.83615",
-            "url": "login=ertel_07&password=43a53593349ea0ec9e66e046558fcd12&channelid=3f8fe25f-9708-4040-a74f-f2e4abd43214&camera_fps=0"
-        },
-        {
-            "id": 11,
-            address: "Парк Культуры",
-            "name": "Банк «Екатеринбург» ОАО, Юго-Западное ОПЕРУ",
-            "lat": "60.627178",
-            "lon": "56.828436",
-            "url": "login=ertel_q7&password=1a52b9fb1587502bae8709d5345a29ae&channelid=6020ac3e-c228-492f-8a5d-d73ab3cf42ba&camera_fps=0"
-        },
-        {
-            "id": 133,
-            address: "Ул Тверская 25/3",
-            "name": "Банк «Екатеринбург» ОАО, Юго-Западное ОПЕРУ",
-            "lat": "60.58290518252431",
-            "lon": "56.836598198318306",
-            "url": "login=ertel_07&password=43a53593349ea0ec9e66e046558fcd12&channelid=c49daca8-2f38-4dc7-ae18-232f8e166a71&camera_fps=0"
-        },
-        {
-            "id": 134,
-            address: "Уличная Улица 225",
-            "name": "Банк «Екатеринбург» ОАО, Юго-Западное ОПЕРУ",
-            "phones": "311–05–66, 311–05–67",
-            "lat": "60.58290518252431",
-            "lon": "56.836598198318306",
-            "url": "login=ertel_07&password=43a53593349ea0ec9e66e046558fcd12&channelid=c49daca8-2f38-4dc7-ae18-232f8e166a71&camera_fps=0"
-        },
-        {
-            "id": 1344,
-            address: "Уличная Улица с Длинным длинным названием 22531",
-            "name": "Банк «Екатеринбург» ОАО, Юго-Западное ОПЕРУ",
-            "lat": "60.64",
-            "lon": "56.84",
-            "url": "login=ertel_07&password=43a53593349ea0ec9e66e046558fcd12&channelid=c49daca8-2f38-4dc7-ae18-232f8e166a71&camera_fps=0"
-        },
-        {
-            "id": 3344,
-            address: "Проспект бразилии",
-            "name": "Банк «Екатеринбург» ОАО, Юго-Западное ОПЕРУ",
-            "lat": "60.64",
-            "lon": "56.84",
-            "url": "login=ertel_07&password=43a53593349ea0ec9e66e046558fcd12&channelid=c49daca8-2f38-4dc7-ae18-232f8e166a71&camera_fps=0"
-        }
-    ];
-</script>
+Камера 1 «Летний паркУРАЛМАШ» Кировградская 1
+
+<script type='text/javascript'> function RunMultiple() {
+    var url = 'http://cctv.ekat.ertelecom.ru:8080/site?login=public&password&channelid=3f8fe25f-9708-4040-a74f-f2e4abd43214&resolutionX=600&resolutionY=800' + '&rand=' + Math.floor(Math.random() * 1000000);
+    document.getElementById('videostreamie').setAttribute('src', url);
+}
+window.onload = function () {
+    var useragent = navigator.userAgent;
+    if (useragent.indexOf('MSIE') != -1) {
+        window.setInterval("RunMultiple();", 500);
+        document.getElementById('videostream').style.display = 'none';
+    }
+} </script>
+<img id="videostream"
+     src="http://cctv.ekat.ertelecom.ru:8080/mobile?login=public&password&channelid=3f8fe25f-9708-4040-a74f-f2e4abd43214&resolutionX=600&resolutionY=800">
+<!--[if IE]> <img id="videostreamie"
+                  src="http://cctv.ekat.ertelecom.ru:8080/site?login=public&password&channelid=3f8fe25f-9708-4040-a74f-f2e4abd43214&resolutionX=600&resolutionY=800"></img>
+<![endif]--> </img>
+
+Камера 2 «Летний паркУРАЛМАШ» Кировградская 1
+
+<script type='text/javascript'> function RunMultiple() {
+    var url = 'http://cctv.ekat.ertelecom.ru:8080/site?login=public&password&channelid=9b08008f-3b02-487c-ab25-577584c88ba7&resolutionX=600&resolutionY=800' + '&rand=' + Math.floor(Math.random() * 1000000);
+    document.getElementById('videostreamie').setAttribute('src', url);
+}
+window.onload = function () {
+    var useragent = navigator.userAgent;
+    if (useragent.indexOf('MSIE') != -1) {
+        window.setInterval("RunMultiple();", 500);
+        document.getElementById('videostream').style.display = 'none';
+    }
+} </script>
+<img id="videostream"
+     src="http://cctv.ekat.ertelecom.ru:8080/mobile?login=public&password&channelid=9b08008f-3b02-487c-ab25-577584c88ba7&resolutionX=600&resolutionY=800">
+<!--[if IE]> <img id="videostreamie"
+                  src="http://cctv.ekat.ertelecom.ru:8080/site?login=public&password&channelid=9b08008f-3b02-487c-ab25-577584c88ba7&resolutionX=600&resolutionY=800"></img>
+<![endif]--> </img>
+
+Камера 3 «Летний паркУРАЛМАШ» Кировградская 1
+
+<script type='text/javascript'> function RunMultiple() {
+    var url = 'http://cctv.ekat.ertelecom.ru:8080/site?login=public&password&channelid=c49daca8-2f38-4dc7-ae18-232f8e166a71&resolutionX=600&resolutionY=800' + '&rand=' + Math.floor(Math.random() * 1000000);
+    document.getElementById('videostreamie').setAttribute('src', url);
+}
+window.onload = function () {
+    var useragent = navigator.userAgent;
+    if (useragent.indexOf('MSIE') != -1) {
+        window.setInterval("RunMultiple();", 500);
+        document.getElementById('videostream').style.display = 'none';
+    }
+} </script>
+<img id="videostream"
+     src="http://cctv.ekat.ertelecom.ru:8080/mobile?login=public&password&channelid=c49daca8-2f38-4dc7-ae18-232f8e166a71&resolutionX=600&resolutionY=800">
+<!--[if IE]> <img id="videostreamie"
+                  src="http://cctv.ekat.ertelecom.ru:8080/site?login=public&password&channelid=c49daca8-2f38-4dc7-ae18-232f8e166a71&resolutionX=600&resolutionY=800"></img>
+<![endif]--> </img>
+
+Камера 1 Вайнера, 9/а/1,
+
+<script type='text/javascript'> function RunMultiple() {
+    var url = 'http://cctv.ekat.ertelecom.ru:8080/site?login=public&password&channelid=3727ead4-c3c4-4a51-bc71-85185a56d44b&resolutionX=600&resolutionY=800' + '&rand=' + Math.floor(Math.random() * 1000000);
+    document.getElementById('videostreamie').setAttribute('src', url);
+}
+window.onload = function () {
+    var useragent = navigator.userAgent;
+    if (useragent.indexOf('MSIE') != -1) {
+        window.setInterval("RunMultiple();", 500);
+        document.getElementById('videostream').style.display = 'none';
+    }
+} </script>
+<img id="videostream"
+     src="http://cctv.ekat.ertelecom.ru:8080/mobile?login=public&password&channelid=3727ead4-c3c4-4a51-bc71-85185a56d44b&resolutionX=600&resolutionY=800">
+<!--[if IE]> <img id="videostreamie"
+                  src="http://cctv.ekat.ertelecom.ru:8080/site?login=public&password&channelid=3727ead4-c3c4-4a51-bc71-85185a56d44b&resolutionX=600&resolutionY=800"></img>
+<![endif]--> </img>
+
+Камера1 Ленина Пр-Кт, 28
+
+<script type='text/javascript'> function RunMultiple() {
+    var url = 'http://cctv.ekat.ertelecom.ru:8080/site?login=public&password&channelid=3a2adfd4-08c9-4af4-a62e-ce9bcfddca72&resolutionX=600&resolutionY=800' + '&rand=' + Math.floor(Math.random() * 1000000);
+    document.getElementById('videostreamie').setAttribute('src', url);
+}
+window.onload = function () {
+    var useragent = navigator.userAgent;
+    if (useragent.indexOf('MSIE') != -1) {
+        window.setInterval("RunMultiple();", 500);
+        document.getElementById('videostream').style.display = 'none';
+    }
+} </script>
+<img id="videostream"
+     src="http://cctv.ekat.ertelecom.ru:8080/mobile?login=public&password&channelid=3a2adfd4-08c9-4af4-a62e-ce9bcfddca72&resolutionX=600&resolutionY=800">
+<!--[if IE]> <img id="videostreamie"
+                  src="http://cctv.ekat.ertelecom.ru:8080/site?login=public&password&channelid=3a2adfd4-08c9-4af4-a62e-ce9bcfddca72&resolutionX=600&resolutionY=800"></img>
+<![endif]--> </img>
+
+Камера2 Ленина Пр-Кт, 28
+
+<script type='text/javascript'> function RunMultiple() {
+    var url = 'http://cctv.ekat.ertelecom.ru:8080/site?login=public&password&channelid=6020ac3e-c228-492f-8a5d-d73ab3cf42ba&resolutionX=600&resolutionY=800' + '&rand=' + Math.floor(Math.random() * 1000000);
+    document.getElementById('videostreamie').setAttribute('src', url);
+}
+window.onload = function () {
+    var useragent = navigator.userAgent;
+    if (useragent.indexOf('MSIE') != -1) {
+        window.setInterval("RunMultiple();", 500);
+        document.getElementById('videostream').style.display = 'none';
+    }
+} </script>
+<img id="videostream"
+     src="http://cctv.ekat.ertelecom.ru:8080/mobile?login=public&password&channelid=6020ac3e-c228-492f-8a5d-d73ab3cf42ba&resolutionX=600&resolutionY=800">
+<!--[if IE]> <img id="videostreamie"
+                  src="http://cctv.ekat.ertelecom.ru:8080/site?login=public&password&channelid=6020ac3e-c228-492f-8a5d-d73ab3cf42ba&resolutionX=600&resolutionY=800"></img>
+<![endif]--> </img>
 
 <script>
     $(function () {
@@ -311,7 +371,7 @@
                         name: json[i].name,
                         address: json[i].address,
                         id: json[i].id,
-                        url: url + json[i].url
+                        url: url + json[i].url + '&rand=' + Math.floor(Math.random() * 1000000)
 
                     }, {
                         balloonZIndex: 1111,
