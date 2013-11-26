@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+<body>
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to
+    improve your experience.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+
+
+<div class="b-wrapper b-page">
+
+    <div class="b-page__content">
+        <div style="overflow: hidden; margin-bottom: 25px;">
+            <a class="b-logo" href="http://domru.ru/">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAMAAABHPGVmAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAGBQTFRF6hoi9NDR6xAZ7IeL/P//7Ssz6G5z9+bm5lBX8bi66l9l7KGl8qaq5TM75iIs+e7u5TtE8rW3+fTz636D7Jib7quu7BUe8bCy+/r587y++fb35kRL9tzc88bI////7RskOKXOAwAAA9ZJREFUeNrt2IlyozgQBuBW0xJYBBlztMFA8/5vubQILk8yiafWoWprh79S4tYXCXEZSrt7SrDz7rEHciAHciAHciAH8p9HQPPjCMQCGDWsS2Get0X+qZZofRCKzNXNtZ9MzNRf88RlZdCt/CoCgCGrryatSGJI/0jW3FJzSbxFfhVJRhKiLp3aJqmdf4+r66adxk7NtAnwEoKOyLSJGyzgp4AdfNIaogRfQ3LpQzzjv+sSZrUauryIvMkX/yboOdfRjF563gPRYOGzwDPsiaBPhaaS90S4SIlEWtyzu9CLZgy8J5LFS9IA7IgAnBaDatx1dHHIR+N45yHMHALDrogGFmJnRHMgB3IgB/I3I5QjMgN8db9HrOmEryEJdW++DMCo1kNQA6H0zZma1xC2JxLpUnNqap+VhbU2hKUoyszXzcWknRCZgl9AVJmz+jJ2EkPVOY05V+saovSS6CveawgAIofBu6S5TqPWfuu62zkdzSVPnB8sIzK8hiizvVgzBFuUMYUNsK7jH/9mBL4H4PjE/p8hjGt4W7yPUeT7Lr/uz1pALHR4IPITBEq/ZphBD7CZc1lgXfAZr9WWzsJ9/8K5ggfnAxfOW57BelfyE+QkMZQWvBguJSGaBpy5qKp4MAdDGd4b0pJck44o5xPpXQwboh6eIJOY9tr2cl4QrInG/FpJWjLbs+RaN2b0iPRCCyEyhmn98srjZ8szpEbGgRaEy4paiziM1CtCCgP0vyDachrH0fFE8rYikxrPEMBBW4KNmIDxuXQrcUFid3iSR+QiknoIAWGSDTF/hHBEwKzPRQ6juAXpblWBfKHqA9IjA8C/Q9Cm5GJteJUGbZXmlKAnM8lHRCv9cwSCkaXiDZGIQESKKs3OabiK7yMCS94Rnu8IYE7PELYp+a0lQbtLK4qyrc6hkbYyoC0BQGD+hOgQlqdIUVGmCG0nPn57drdBEbtslRojMidmyvADYgIW5tkQZu1yQERFEMtK3sIyGamHhV9WXcUEUESvFhkD82lDtJ/IXFJ5MoTZN0bGZklLt7axmJCYJj9LOvCKDJNDMIp4EqmKRyQjESK6EZmvEZixlRiiWGaIdaqzRvvFdlonMESEi1EkZ9BDrrgen1Qi1OrFyF8i8YUxd1tGyRiwcMn7+wg4t3Y1ZLWFmYvaBdZJvd0PeagTz6FOhieIxy0TZbze6iOxbMWl1DBCLJG3yeMvr3HF94jDdVYvYEU+5+ufn9/Xa/kd0nQe7/f82/B75MPM583fI2yHAO/7cjHMsMvjF/hhHmGG423lQA7kQA7kQP4ypLS7p/wHEP4cE/iw8uwAAAAASUVORK5CYII="
+                     width="100" height="100">
+            </a>
+
+            <h1 class="b-main-head">Веб камеры в Екатеринбурге</h1>
+        </div>
+
+        <div class="b-ya-video-map">
+            <div id="map" style="height: 500px"></div>
+            <div class="b-ya-video-map__points-box">
+                <span class="b-ya-video-map__points-h">Адреса расположения веб камер:</span>
+                <span id="js-ya-video-map__points-box" class="b-ya-video-map__links-box"></span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer style="position: relative; margin-top: -100px; height: 100px; ">
+    <div class="b-wrapper b-footer">
+        <div class="b-footer__menu">
+            <a href="http://ertelecom.ru">О Компании</a>
+            <br>
+            <a href="http://rabotavdomru.ru?city=nn" target="_blank">Вакансии</a>
+            <br>
+            <a href="http://nn.b2b.domru.ru">Дом.ru Бизнес</a>&nbsp;
+        </div>
+        <div class="b-footer__copyr">
+            © ЗАО «ЭР-Телеком Холдинг» 2013 г. ОАО «ЭР-Телеком» в г. Пермь. <br>
+            г. Пермь, Шоссе Космонавтов 111
+        </div>
+    </div>
+</footer>
+
+<div  id="popup" style="">
+    <div id="popupInner">
+        <span id="close">x</span>
+        <div>
+            <script type='text/javascript'> function RunMultiple() {
+                var url = 'http://cctv.ekat.ertelecom.ru:8080/site?login=public&password&channelid=3f8fe25f-9708-4040-a74f-f2e4abd43214&resolutionX=600&resolutionY=800' + '&rand=' + Math.floor(Math.random() * 1000000);
+                document.getElementById('videostreamie').setAttribute('src', url);
+            }
+            window.onload = function () {
+                var useragent = navigator.userAgent;
+                if (useragent.indexOf('MSIE') != -1) {
+                    window.setInterval("RunMultiple();", 500);
+                    document.getElementById('videostream').style.display = 'none';
+                }
+            } </script><img id="videostream" src="http://cctv.ekat.ertelecom.ru:8080/mobile?login=public&password&channelid=3f8fe25f-9708-4040-a74f-f2e4abd43214&resolutionX=600&resolutionY=800"><!--[if IE]> <img id="videostreamie" src="http://cctv.ekat.ertelecom.ru:8080/site?login=public&password&channelid=3f8fe25f-9708-4040-a74f-f2e4abd43214&resolutionX=600&resolutionY=800"></img><![endif]--> </img>
+        </div>
+    </div>
+</div>
+
+<script src="js/vendor/jquery-1.8.2.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+
+
+<!-- -->
+<script id="ya-map-tpl" type="tpl">
+    <div style="padding: 15px;">
+        <div style="margin-bottom: 10px;">
+            <img id="pop-video" width="320" height="240" src="$[properties.url]">
+        </div>
+        <div style="text-align: center;">
+            <a class="b-button" href="$[properties.url]">Во весь экран</a>
+        </div>
+    </div>
+</script>
+<!-- -->
+
+<!-- данные для карты-->
+<script>
+    var yaVideoPointData = [
+        {//60.600147,56.888199
+            "id": 1,
+             address: "Кировградская 1",
+            "name": "Камера 1 «Летний паркУРАЛМАШ» Кировградская 1",
+            "lat": "60.600147",
+            "lon": "56.888199",
+            "url": "login=public&password&channelid=3f8fe25f-9708-4040-a74f-f2e4abd43214"
+        },
+        {//60.601048,56.887658
+            "id": 11,
+            address: "Кировградская 1",
+            "name": "Камера 2 «Летний паркУРАЛМАШ» Кировградская 1 ",
+            "lat": "60.601048",
+            "lon": "56.887658",
+            "url": "login=public&password&channelid=9b08008f-3b02-487c-ab25-577584c88ba7"
+        },
+        { //60.598945,56.886883
+            "id": 133,
+            address: "Кировградская 1",
+            "name": "Камера 3 «Летний паркУРАЛМАШ» Кировградская 1",
+            "lat": "60.598945",
+            "lon": "56.886883",
+            "url": "login=public&password&channelid=c49daca8-2f38-4dc7-ae18-232f8e166a71"
+        },
+        { //60.594983,56.836306
+            "id": 134,
+            address: "Вайнера, 9/а/1",
+            "name": "Камера 1 Вайнера, 9/а/1",
+            "phones": "311–05–66, 311–05–67",
+            "lat": "60.594983",
+            "lon": "56.836306",
+            "url": "login=public&password&channelid=3727ead4-c3c4-4a51-bc71-85185a56d44b"
+        },
+        { //60.600843,56.837731
+            "id": 1344,
+            address: "Ленина Пр-Кт, 28",
+            "name": "Камера1 Ленина Пр-Кт, 28",
+            "lat": "60.600843",
+            "lon": "56.837731",
+            "url": "login=public&password&channelid=3a2adfd4-08c9-4af4-a62e-ce9bcfddca72"
+        } ,
+        { //60.600897,56.837931
+            "id": 1345,
+            address: "Ленина Пр-Кт, 28",
+            "name": " Камера2 Ленина Пр-Кт, 28",
+            "lat": "60.600897",
+            "lon": "56.837931",
+            "url": "login=public&password&channelid=6020ac3e-c228-492f-8a5d-d73ab3cf42ba"
+        },
+        { //60.59663,56.842374
+            "id": 1346,
+            address: "Октябрьская площадь.",
+            "name": "Октябрьская площадь.",
+            "lat": "60.59663",
+            "lon": "56.842374",
+            "url": "login=public&password&channelid=42bf3da7-2399-40e6-9a7f-adfe4a70d8c1"
+        }
+    ];
+</script>
+
+<script>
+    $(function () {
+        ymaps.ready(init);
+        var map;
+        var data = yaVideoPointData;
+
+
+        function init() {
+
+            var BallonTpl = $('#ya-map-tpl').html();
+
+            var url = 'http://cctv.ekat.ertelecom.ru:8080/mobile?';
+
+            if ($.browser.msie) {
+                url = 'http://cctv.ekat.ertelecom.ru:8080/site?';
+            }
+
+
+            var map = new ymaps.Map("map", {
+                center: [56.326944, 44.0075],
+                zoom: 10,
+                type: 'yandex#map'
+            });
+
+            map.controls
+                    .add('zoomControl');
+
+            var myCollection = new ymaps.GeoObjectCollection();
+
+            console.log(myCollection);
+
+            renderPoints(data);
+
+
+            function renderPoints(json) {
+
+                var html = '';
+                var i = 0;
+                if (json.length === 0) {
+                    return;
+                }
+
+
+                myCollection.removeAll();
+
+                for (i = 0; i < json.length; i++) {
+
+                    html += '<a data-id="' + json[i].id + '" class="js-ya-video-map__points-box__a b-ya-video-map__p-l" href="">' + json[i].name + '</a>';
+
+                    if (!(json.length - 1 === i)) {
+                        html += ', '
+                    }
+
+                    var BallLayout = ymaps.templateLayoutFactory.createClass(BallonTpl);
+
+                    var placemark = new ymaps.Placemark([json[i].lon, json[i].lat], {
+                        name: json[i].name,
+                        address: json[i].address,
+                        id: json[i].id,
+                        url: url + json[i].url +'&rand=' + Math.floor(Math.random() * 1000000)
+
+                    }, {
+                        balloonZIndex: 1111,
+                        balloonContentLayout: BallLayout,
+                        pointSelected: false,
+                        preset: 'twirl#redIcon'
+                    });
+
+
+                    // добавляем метки в коллекцию
+                    myCollection.add(placemark);
+
+                }
+
+                $('#js-ya-video-map__points-box').html(html);
+
+                $('.js-ya-video-map__points-box__a').click(function (e) {
+
+                    e.preventDefault();
+                    var $that = $(this);
+                    var id = $(this).data('id');
+
+                    if ($that.hasClass('b-ya-video-map__p-l_active')) {
+                        return false;
+                    }
+
+                    $('.js-ya-video-map__points-box__a').removeClass('b-ya-video-map__p-l_active');
+                    $that.addClass('b-ya-video-map__p-l_active');
+                    go_to(id);
+                });
+
+
+                map.geoObjects.add(myCollection);
+                // Set center and zoom using collection bounds.
+                map.setBounds(myCollection.getBounds(), {checkZoomRange: true});
+
+            }
+
+            function go_to(id) {
+
+                //lat,lon,address
+                // map.setCenter([56.796028, 60.581098], 16);
+
+                myCollection.each(function (point) {
+
+                    var idProp = parseInt(point.properties.get('id'), 10);
+                    point.options.set('pointSelected', false);
+
+                    if (id === idProp) {
+
+                        //центрируем карту на точку
+                        // point.options.set('balloonAutoPan', false);
+                        // point.options.set('iconImageHref', 'imgs/ya-maps/point.png');
+                        //point.options.set('pointSelected', true);
+
+                        point.balloon.open();
+                        map.setBounds(point.geometry.getBounds(),
+                                {
+                                    checkZoomRange: true,
+                                    callback: function () {
+                                        point.balloon.open();
+                                        point.options.set('balloonAutoPan', true);
+                                    }
+                                });
+
+                    }
+                });
+
+                return false;
+            }
+
+            $('#close').on('click', function(e){
+                $('#popup').hide();
+                $('#videostream')[0].src = ' ';
+            });
+
+            $('body').on('click', '.b-button',function(e){
+                e.preventDefault();
+                var url = $('#pop-video').attr('src');
+                map.balloon.close();
+                $('#videostream')[0].src = url +'resolutionX=600&resolutionY=800';
+                $('#popup').show();
+
+            });
+        }
+
+
+
+    });
+</script>
+
+</body>
+</html>
