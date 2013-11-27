@@ -174,10 +174,10 @@
 
             var BallonTpl = $('#ya-map-tpl').html();
 
-            var url = 'http://cctv.ekat.ertelecom.ru:8080/mobile?';
+            var url = '';
 
             if ($.browser.msie) {
-                url = 'http://cctv.ekat.ertelecom.ru:8080/site?';
+                url = '';
             }
 
 
@@ -222,7 +222,7 @@
                         name: json[i].name,
                         address: json[i].address,
                         id: json[i].id,
-                        url: url + json[i].url +'&rand=' + Math.floor(Math.random() * 1000000)
+                        url:  json[i].url
 
                     }, {
                         balloonZIndex: 1111,
@@ -301,6 +301,8 @@
 
                 var id = $('.balloon-content').attr('id');
                 var url = $('.balloon-content').data('url');
+
+                alert(url);
 
                 var p = jwplayer(id).setup({
                     file: url,
