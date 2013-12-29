@@ -73,9 +73,10 @@
     </div>
 </footer>
 
-<div  id="popup" style="">
+<div id="popup" style="">
     <div id="popupInner">
         <span id="close">x</span>
+
         <div id="pop-video-box">
 
         </div>
@@ -98,276 +99,291 @@
             <a class="b-button" href="$[properties.url]">Во весь экран</a>
         </div>
     </div>
+
+
+
 </script>
 <!-- -->
 
 <!-- данные для карты-->
 <script>
     var yaVideoPointData = [
-        {//60.600147,56.888199
+
+        { //60.600897,56.837931 //ok
             "id": 1,
-            address: "Кировградская 1",
-            "name": "Камера 1 «Летний паркУРАЛМАШ» Кировградская 1",
-            "lat": "60.600147",
-            "lon": "56.888199",
-            "url": "http://188.234.129.43:1935/iptv/camera/camera3.smil/playlist.m3u8"
-        },
-        {//60.601048,56.887658
-            "id": 11,
-            address: "Кировградская 1",
-            "name": "Камера 2 «Летний паркУРАЛМАШ» Кировградская 1 ",
-            "lat": "60.601048",
-            "lon": "56.887658",
-            "url": "http://188.234.129.43:1935/iptv/camera/camera5.smil/playlist.m3u8"
-        },
-        { //60.598945,56.886883
-            "id": 133,
-            address: "Кировградская 1",
-            "name": "Камера 3 «Летний паркУРАЛМАШ» Кировградская 1",
-            "lat": "60.598945",
-            "lon": "56.886883",
-            "url": "http://188.234.129.43:1935/iptv/camera/camera3.smil/playlist.m3u8"
-        },
-        { //60.594983,56.836306
-            "id": 134,
-            address: "Вайнера, 9/а/1",
-            "name": "Камера 1 Вайнера, 9/а/1",
-            "phones": "311–05–66, 311–05–67",
-            "lat": "60.594983",
-            "lon": "56.836306",
-            "url": "http://188.234.129.43:1935/iptv/camera/camera6.smil/playlist.m3u8"
-        },
-        { //60.600843,56.837731
-            "id": 1344,
-            address: "Ленина Пр-Кт, 28",
-            "name": "Камера1 Ленина Пр-Кт, 28",
-            "lat": "60.600843",
-            "lon": "56.837731",
-            "url": "http://188.234.129.43:1935/iptv/camera/camera2.smil/playlist.m3u8"
-        } ,
-        { //60.600897,56.837931
-            "id": 1345,
             address: "Ленина Пр-Кт, 28",
             "name": " Камера2 Ленина Пр-Кт, 28",
             "lat": "60.600897",
             "lon": "56.837931",
             "url": "http://188.234.129.43:1935/iptv/camera/camera1.smil/playlist.m3u8"
         },
-        { //60.59663,56.842374
-            "id": 1346,
-            address: "Октябрьская площадь.",
-            "name": "Октябрьская площадь.",
-            "lat": "60.59663",
-            "lon": "56.842374",
+        { //60.600843,56.837731 //ok
+            "id": 2,
+            address: "Ленина Пр-Кт, 28",
+            "name": "Камера1 Ленина Пр-Кт, 28",
+            "lat": "60.600843",
+            "lon": "56.837731",
+            "url": "http://188.234.129.43:1935/iptv/camera/camera2.smil/playlist.m3u8"
+        } ,
+
+        { //60.595489,56.835658 //ok
+            "id": 3,
+            address: "Вайнера, 9/1",
+            "name": "Вайнера, 9/1 ",
+            "lat": "60.595489",
+            "lon": "56.835658",
+            "url": "http://188.234.129.43:1935/iptv/camera/camera3.smil/playlist.m3u8"
+        },
+        { //60.611776,56.856181 /ok
+            "id": 4,
+            address: "Мамина-Сибиряка, 2",
+            "name": "Мамина-Сибиряка, 2",
+            "lat": "60.611776",
+            "lon": "56.856181",
+            "url": "http://188.234.129.43:1935/iptv/camera/camera4.smil/playlist.m3u8"
+        },
+        { //60.618953,56.840749
+            "id": 5,
+            address: "Ленина Пр-Кт, 53",
+            "name": "Ленина Пр-Кт, 53",
+            "lat": "60.618953",
+            "lon": "56.840749",
+            "url": "http://188.234.129.43:1935/iptv/camera/camera5.smil/playlist.m3u8"
+        },
+        {//60.600147,56.888199
+            "id": 6,
+            address: "Кировградская 1",
+            "name": "Камера 1 «Летний паркУРАЛМАШ»",
+            "lat": "60.600147",
+            "lon": "56.888199",
             "url": "http://188.234.129.43:1935/iptv/camera/camera6.smil/playlist.m3u8"
+        },
+        {//60.601048,56.887658
+            "id": 7,
+            address: "Кировградская 1",
+            "name": "Камера 2 «Летний паркУРАЛМАШ»",
+            "lat": "60.601048",
+            "lon": "56.887658",
+            "url": "http://188.234.129.43:1935/iptv/camera/camera7.smil/playlist.m3u8"
+        },
+        { //60.598945,56.886883
+            "id": 8,
+            address: "Кировградская 1",
+            "name": "Камера 3 «Летний паркУРАЛМАШ»",
+            "lat": "60.598945",
+            "lon": "56.886883",
+            "url": "http://188.234.129.43:1935/iptv/camera/camera8.smil/playlist.m3u8"
         }
     ];
 </script>
 
 
 <script>
-    $(function () {
-        ymaps.ready(init);
-        var map;
-        var data = yaVideoPointData;
+$(function () {
+    ymaps.ready(init);
+    var map;
+    var data = yaVideoPointData;
 
 
-        function init() {
+    function init() {
 
-            var BallonTpl = $('#ya-map-tpl').html();
+        var BallonTpl = $('#ya-map-tpl').html();
 
-            var url = '';
+        var url = '';
 
-            if ($.browser.msie) {
-                url = '';
-            }
-
-
-            var map = new ymaps.Map("map", {
-                center: [56.326944, 44.0075],
-                zoom: 10,
-                type: 'yandex#map'
-            });
-
-            map.controls
-                    .add('zoomControl');
-
-            var myCollection = new ymaps.GeoObjectCollection();
-
-            console.log(myCollection);
-
-            renderPoints(data);
-
-
-            function renderPoints(json) {
-
-                var html = '';
-                var i = 0;
-                if (json.length === 0) {
-                    return;
-                }
-
-
-                myCollection.removeAll();
-
-                for (i = 0; i < json.length; i++) {
-
-                    html += '<a data-id="' + json[i].id + '" class="js-ya-video-map__points-box__a b-ya-video-map__p-l" href="">' + json[i].name + '</a>';
-
-                    if (!(json.length - 1 === i)) {
-                        html += ', '
-                    }
-
-                    var BallLayout = ymaps.templateLayoutFactory.createClass(BallonTpl);
-
-                    var placemark = new ymaps.Placemark([json[i].lon, json[i].lat], {
-                        name: json[i].name,
-                        address: json[i].address,
-                        id: json[i].id,
-                        url:  json[i].url
-
-                    }, {
-                        balloonZIndex: 1111,
-                        balloonContentLayout: BallLayout,
-                        pointSelected: false,
-                        preset: 'twirl#redIcon'
-                    });
-
-
-                    // добавляем метки в коллекцию
-                    myCollection.add(placemark);
-
-                }
-
-                $('#js-ya-video-map__points-box').html(html);
-
-                $('.js-ya-video-map__points-box__a').click(function (e) {
-
-                    e.preventDefault();
-                    var $that = $(this);
-                    var id = $(this).data('id');
-
-                    if ($that.hasClass('b-ya-video-map__p-l_active')) {
-                        return false;
-                    }
-
-                    $('.js-ya-video-map__points-box__a').removeClass('b-ya-video-map__p-l_active');
-                    $that.addClass('b-ya-video-map__p-l_active');
-                    go_to(id);
-                });
-
-
-                map.geoObjects.add(myCollection);
-                // Set center and zoom using collection bounds.
-                map.setBounds(myCollection.getBounds(), {checkZoomRange: true});
-
-            }
-
-            function go_to(id) {
-
-                //lat,lon,address
-                // map.setCenter([56.796028, 60.581098], 16);
-
-                myCollection.each(function (point) {
-
-                    var idProp = parseInt(point.properties.get('id'), 10);
-                    point.options.set('pointSelected', false);
-
-                    if (id === idProp) {
-
-                        //центрируем карту на точку
-                        // point.options.set('balloonAutoPan', false);
-                        // point.options.set('iconImageHref', 'imgs/ya-maps/point.png');
-                        //point.options.set('pointSelected', true);
-
-                        point.balloon.open();
-                        map.setBounds(point.geometry.getBounds(),
-                                {
-                                    checkZoomRange: true,
-                                    callback: function () {
-                                        point.balloon.open();
-                                        point.options.set('balloonAutoPan', true);
-                                    }
-                                });
-
-                    }
-                });
-
-                return false;
-            }
-
-            map.balloon.events.add('open', function(e){
-
-                //console.log(e);
-               // console.log(e.get("child"));
-
-                var id = $('.balloon-content').attr('id');
-                var url = $('.balloon-content').data('url');
-
-                //alert(url);
-
-                var p = jwplayer(id).setup({
-                    playlist: [{
-                        file: url,
-                        provider:'HLSProvider6.swf',
-                        type:'hls',
-                        image : 'http://amekb.ru/assets/images/1news/%D0%B4%D0%BE%D0%BC%D1%80%D1%83.jpg'
-                    }],
-                    image : 'http://amekb.ru/assets/images/1news/%D0%B4%D0%BE%D0%BC%D1%80%D1%83.jpg',
-                    primary: "flash",
-
-                    autostart: true,
-
-                    aspectratio: '16:9',
-                    width: '100%',
-                    height: '200'
-
-                });
-
-                p.play();
-
-                $('#close').on('click', function(e){
-                    $('#popup').hide();
-                    jwplayer().remove();
-
-                });
-
-                $('body').on('click', '.b-button',function(e){
-                    e.preventDefault();
-
-                    $('#popup').show();
-                    console.log(p);
-                    map.balloon.close();
-
-                    jwplayer('pop-video-box').setup({
-                        playlist: [{
-                            file: url,
-                            provider:'HLSProvider6.swf',
-                            type:'hls'
-                        }],
-                        primary: "flash",
-
-                        autostart: 'true',
-                        fallback: 'false',
-                        aspectratio: '16:9',
-                        width: '100%'
-
-                    });
-
-
-                });
-
-
-            });
-
-            map.balloon.events.add('close', function(){
-               //jwplayer().remove();
-            });
+        if ($.browser.msie) {
+            url = '';
         }
 
 
+        var map = new ymaps.Map("map", {
+            center: [56.326944, 44.0075],
+            zoom: 10,
+            type: 'yandex#map'
+        });
 
-    });
+        map.controls
+                .add('zoomControl');
+
+        var myCollection = new ymaps.GeoObjectCollection();
+
+        console.log(myCollection);
+
+        renderPoints(data);
+
+
+        function renderPoints(json) {
+
+            var html = '';
+            var i = 0;
+            if (json.length === 0) {
+                return;
+            }
+
+
+            myCollection.removeAll();
+
+            for (i = 0; i < json.length; i++) {
+
+                html += '<a data-id="' + json[i].id + '" class="js-ya-video-map__points-box__a b-ya-video-map__p-l" href="">' + json[i].name + '</a>';
+
+                if (!(json.length - 1 === i)) {
+                    html += ', '
+                }
+
+                var BallLayout = ymaps.templateLayoutFactory.createClass(BallonTpl);
+
+                var placemark = new ymaps.Placemark([json[i].lon, json[i].lat], {
+                    name: json[i].name,
+                    address: json[i].address,
+                    id: json[i].id,
+                    url: json[i].url
+
+                }, {
+                    balloonZIndex: 1111,
+                    balloonContentLayout: BallLayout,
+                    pointSelected: false,
+                    preset: 'twirl#redIcon'
+                });
+
+
+                // добавляем метки в коллекцию
+                myCollection.add(placemark);
+
+            }
+
+            $('#js-ya-video-map__points-box').html(html);
+
+            $('.js-ya-video-map__points-box__a').click(function (e) {
+
+                e.preventDefault();
+                var $that = $(this);
+                var id = $(this).data('id');
+
+                if ($that.hasClass('b-ya-video-map__p-l_active')) {
+                    return false;
+                }
+
+                $('.js-ya-video-map__points-box__a').removeClass('b-ya-video-map__p-l_active');
+                $that.addClass('b-ya-video-map__p-l_active');
+                go_to(id);
+            });
+
+
+            map.geoObjects.add(myCollection);
+            // Set center and zoom using collection bounds.
+            map.setBounds(myCollection.getBounds(), {checkZoomRange: true});
+
+        }
+
+        function go_to(id) {
+
+            //lat,lon,address
+            // map.setCenter([56.796028, 60.581098], 16);
+
+            myCollection.each(function (point) {
+
+                var idProp = parseInt(point.properties.get('id'), 10);
+                point.options.set('pointSelected', false);
+
+                if (id === idProp) {
+
+                    //центрируем карту на точку
+                    // point.options.set('balloonAutoPan', false);
+                    // point.options.set('iconImageHref', 'imgs/ya-maps/point.png');
+                    //point.options.set('pointSelected', true);
+
+                    point.balloon.open();
+                    map.setBounds(point.geometry.getBounds(),
+                            {
+                                checkZoomRange: true,
+                                callback: function () {
+                                    point.balloon.open();
+                                    point.options.set('balloonAutoPan', true);
+                                }
+                            });
+
+                }
+            });
+
+            return false;
+        }
+
+        map.balloon.events.add('open', function (e) {
+
+            //console.log(e);
+            // console.log(e.get("child"));
+
+            var id = $('.balloon-content').attr('id');
+            var url = $('.balloon-content').data('url');
+
+            //alert(url);
+
+            var p = jwplayer(id).setup({
+                playlist: [
+                    {
+                        file: url,
+                        provider: 'HLSProvider6.swf',
+                        type: 'hls',
+                        image: 'http://amekb.ru/assets/images/1news/%D0%B4%D0%BE%D0%BC%D1%80%D1%83.jpg'
+                    }
+                ],
+                image: 'http://amekb.ru/assets/images/1news/%D0%B4%D0%BE%D0%BC%D1%80%D1%83.jpg',
+                primary: "flash",
+
+                autostart: true,
+
+                aspectratio: '16:9',
+                width: '100%',
+                height: '200'
+
+            });
+
+            p.play();
+
+            $('#close').on('click', function (e) {
+                $('#popup').hide();
+                jwplayer().remove();
+
+            });
+
+            $('body').on('click', '.b-button', function (e) {
+                e.preventDefault();
+
+                $('#popup').show();
+                console.log(p);
+                map.balloon.close();
+
+                jwplayer('pop-video-box').setup({
+                    playlist: [
+                        {
+                            file: url,
+                            provider: 'HLSProvider6.swf',
+                            type: 'hls'
+                        }
+                    ],
+                    primary: "flash",
+
+                    autostart: 'true',
+                    fallback: 'false',
+                    aspectratio: '16:9',
+                    width: '100%'
+
+                });
+
+
+            });
+
+
+        });
+
+        map.balloon.events.add('close', function () {
+            //jwplayer().remove();
+        });
+    }
+
+
+});
 </script>
 
 </body>
